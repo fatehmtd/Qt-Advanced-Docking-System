@@ -31,7 +31,7 @@
 //                                   INCLUDES
 //============================================================================
 #include "DockContainerWidget.h"
-#include "ads_globals.h"
+#include "DockSystem.h"
 
 class QSettings;
 

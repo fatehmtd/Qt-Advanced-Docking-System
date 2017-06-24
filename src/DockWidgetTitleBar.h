@@ -32,7 +32,7 @@
 //============================================================================
 #include <QFrame>
 
-#include "ads_globals.h"
+#include "DockSystem.h"
 
 namespace ads
 {

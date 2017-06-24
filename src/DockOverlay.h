@@ -28,7 +28,7 @@
 #include <QFrame>
 class QGridLayout;
 
-#include "ads_globals.h"
+#include "DockSystem.h"
 
 namespace ads
 {

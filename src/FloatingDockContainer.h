@@ -31,7 +31,7 @@
 //============================================================================
 #include <QWidget>
 
-#include "ads_globals.h"
+#include "DockSystem.h"
 
 class QXmlStreamReader;
 

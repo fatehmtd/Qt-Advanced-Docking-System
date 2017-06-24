@@ -41,7 +41,7 @@
 #include <QSplitter>
 #include <QXmlStreamWriter>
 
-
+#include "ads_globals.h"
 #include "DockContainerWidget.h"
 #include "DockWidget.h"
 #include "DockWidgetTitleBar.h"

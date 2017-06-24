@@ -32,7 +32,9 @@
 //============================================================================
 #include <QFrame>
 
-#include "ads_globals.h"
+#include "DockSystem.h"
+
+class QSplitter;
 
 class QXmlStreamWriter;
 class QXmlStreamReader;
