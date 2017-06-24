@@ -27,12 +27,24 @@
 //============================================================================
 
 
+#if defined(ADS_DLL)
+#if defined(ADS_EXPORT)
+#define ASD_API __declspec(dllexport)
+#else
+#define ASD_API __declspec(dllimport)
+#endif
+#else
+#define ASD_API
+#endif
+
+
 //============================================================================
 //                                   INCLUDES
 //============================================================================
 #include <QPair>
 
 class QSplitter;
+
 
 namespace ads
 {
@@ -59,12 +71,12 @@ namespace internal
 /**
  * Helper function to create new splitter widgets
  */
-QSplitter* newSplitter(Qt::Orientation orientation, QWidget* parent = 0);
+ASD_API QSplitter* newSplitter(Qt::Orientation orientation, QWidget* parent = 0);
 
 /**
  * Replace the from widget in the given splitter with the To widget
  */
-void replaceSplitterWidget(QSplitter* Splitter, QWidget* From, QWidget* To);
+ASD_API void replaceSplitterWidget(QSplitter* Splitter, QWidget* From, QWidget* To);
 
 /**
  * Convenience class for QPair to provide better naming than first and
@@ -82,7 +94,7 @@ public:
 /**
  * Returns the insertion parameters for the given dock area
  */
-CDockInsertParam dockAreaInsertParameters(DockWidgetArea Area);
+ASD_API CDockInsertParam dockAreaInsertParameters(DockWidgetArea Area);
 
 /**
  * Searches for the parent widget of the given type.

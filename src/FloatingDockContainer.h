@@ -31,6 +31,8 @@
 //============================================================================
 #include <QWidget>
 
+#include "ads_globals.h"
+
 class QXmlStreamReader;
 
 namespace ads
@@ -46,12 +48,12 @@ class CDockManager;
  * docking of dock widgets like the main window and that can be docked into
  * another dock container
  */
-class CFloatingDockContainer : public QWidget
+class ASD_API CFloatingDockContainer : public QWidget
 {
 	Q_OBJECT
 private:
 	FloatingDockContainerPrivate* d; ///< private data (pimpl)
-	friend struct FloatingDockContainerPrivate;
+    friend struct FloatingDockContainerPrivate;
 
 private slots:
 	void onDockAreasAddedOrRemoved();

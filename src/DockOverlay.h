@@ -39,12 +39,12 @@ class CDockOverlayCross;
  * DockOverlay paints a translucent rectangle over another widget. The geometry
  * of the rectangle is based on the mouse location.
  */
-class CDockOverlay : public QFrame
+class ASD_API CDockOverlay : public QFrame
 {
 	Q_OBJECT
 private:
 	DockOverlayPrivate* d; //< private data class
-	friend struct DockOverlayPrivate;
+    friend struct DockOverlayPrivate;
 	friend class DockOverlayCross;
 
 public:
@@ -113,12 +113,12 @@ struct DockOverlayCrossPrivate;
  * I could have handled everything inside DockOverlay, but because of some
  * styling issues it's better to have a separate class for the cross.
  */
-class CDockOverlayCross : public QWidget
+class ASD_API CDockOverlayCross : public QWidget
 {
 	Q_OBJECT
 private:
 	DockOverlayCrossPrivate* d;
-	friend struct DockOverlayCrossPrivate;
+    friend struct DockOverlayCrossPrivate;
 	friend class CDockOverlay;
 
 public:

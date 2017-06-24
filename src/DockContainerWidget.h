@@ -49,12 +49,12 @@ class CFloatingDockContainer;
  * Container that manages a number of dock areas with single dock widgets
  * or tabyfied dock widgets in each area
  */
-class CDockContainerWidget : public QFrame
+class ASD_API CDockContainerWidget : public QFrame
 {
 	Q_OBJECT
 private:
 	DockContainerWidgetPrivate* d; ///< private data (pimpl)
-	friend struct DockContainerWidgetPrivate;
+    friend struct DockContainerWidgetPrivate;
 
 protected:
 	/**

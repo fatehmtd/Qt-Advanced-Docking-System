@@ -31,6 +31,8 @@
 //============================================================================
 #include <QSplitter>
 
+#include "ads_globals.h"
+
 namespace ads
 {
 struct DockSplitterPrivate;
@@ -38,12 +40,12 @@ struct DockSplitterPrivate;
 /**
  * Splitter used internally instead of QSplitter
  */
-class CDockSplitter : public QSplitter
+class ASD_API CDockSplitter : public QSplitter
 {
 	Q_OBJECT
 private:
 	DockSplitterPrivate* d;
-	friend struct DockSplitterPrivate;
+    friend struct DockSplitterPrivate;
 
 public:
 	CDockSplitter(QWidget *parent = Q_NULLPTR);

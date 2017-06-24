@@ -32,6 +32,8 @@
 //============================================================================
 #include <QFrame>
 
+#include "ads_globals.h"
+
 class QXmlStreamWriter;
 
 namespace ads
@@ -47,19 +49,19 @@ struct DockContainerWidgetPrivate;
  * The QDockWidget class provides a widget that can be docked inside a
  * CDockManager or floated as a top-level window on the desktop.
  */
-class CDockWidget : public QFrame
+class ASD_API CDockWidget : public QFrame
 {
 	Q_OBJECT
 private:
 	DockWidgetPrivate* d; ///< private data (pimpl)
-	friend struct DockWidgetPrivate;
+    friend struct DockWidgetPrivate;
 
 protected:
 	friend class CDockContainerWidget;
 	friend class CDockAreaWidget;
 	friend class CFloatingDockContainer;
 	friend class CDockManager;
-	friend struct DockContainerWidgetPrivate;
+    friend struct DockContainerWidgetPrivate;
 
 	/**
 	 * Assigns the dock manager that manages this dock widget

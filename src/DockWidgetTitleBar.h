@@ -32,6 +32,8 @@
 //============================================================================
 #include <QFrame>
 
+#include "ads_globals.h"
+
 namespace ads
 {
 class CDockWidget;
@@ -41,14 +43,14 @@ struct DockWidgetTitleBarPrivate;
 /**
  * A dock widget title bar that shows a title and an icon
  */
-class CDockWidgetTitleBar : public QFrame
+class ASD_API CDockWidgetTitleBar : public QFrame
 {
 	Q_OBJECT
 	Q_PROPERTY(bool activeTab READ isActiveTab WRITE setActiveTab NOTIFY activeTabChanged)
 
 private:
 	DockWidgetTitleBarPrivate* d; ///< private data (pimpl)
-	friend struct DockWidgetTitleBarPrivate;
+    friend struct DockWidgetTitleBarPrivate;
 
 protected:
 	virtual void mousePressEvent(QMouseEvent* ev) override;

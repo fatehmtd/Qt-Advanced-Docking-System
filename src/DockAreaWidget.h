@@ -32,6 +32,8 @@
 //============================================================================
 #include <QFrame>
 
+#include "ads_globals.h"
+
 class QXmlStreamWriter;
 
 namespace ads
@@ -47,12 +49,12 @@ class CDockWidget;
  * It displays a title tab, which is clickable and will switch to
  * the contents associated to the title when clicked.
  */
-class CDockAreaWidget : public QFrame
+class ASD_API CDockAreaWidget : public QFrame
 {
 	Q_OBJECT
 private:
 	DockAreaWidgetPrivate* d; ///< private data (pimpl)
-	friend struct DockAreaWidgetPrivate;
+    friend struct DockAreaWidgetPrivate;
 
 private slots:
 	void onDockWidgetTitleClicked();

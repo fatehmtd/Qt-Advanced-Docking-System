@@ -31,6 +31,7 @@
 //                                   INCLUDES
 //============================================================================
 #include "DockContainerWidget.h"
+#include "ads_globals.h"
 
 class QSettings;
 
@@ -44,12 +45,12 @@ class CDockOverlay;
 /**
  * The central dock manager that maintains the complete docking system
  **/
-class CDockManager : public CDockContainerWidget
+class ASD_API CDockManager : public CDockContainerWidget
 {
 	Q_OBJECT
 private:
 	DockManagerPrivate* d; ///< private data (pimpl)
-	friend struct DockManagerPrivate;
+    friend struct DockManagerPrivate;
 
 protected:
 
